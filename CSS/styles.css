@@ -1,0 +1,121 @@
+body {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: none;
+    margin: 0;
+}
+
+h2 {
+    opacity: 50%;
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: none;
+    margin: 0;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+p {
+    opacity: 70%;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+img {
+    border-radius: 50%;
+    float: left;
+    width: 28px;
+    height: auto;
+    border: 1px solid hsla(0, 0%, 100%, 0.5);
+    margin-right: 13px;
+}
+
+.grid-container {
+    border: 200px solid hsl(210, 46%, 95%);
+    background-color: hsl(210, 46%, 95%);
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
+    margin: auto;
+    display: grid;
+    height: auto;
+    grid-gap: 1.5rem;
+    justify-content: center;
+    grid-template-columns: 325px;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-areas:
+    "content1"
+    "content2"
+    "content3"
+    "content4"
+    "content5";
+}
+
+#content1, #content2, #content3, #content4, #content5 {
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 10px 10px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+#content1 {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 82% 0%;
+    color: hsl(0, 0%, 100%);
+    grid-area: content1;
+}
+
+#content2 {
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+    grid-area: content2;
+}
+
+#content3 {
+    background-color:hsl(0, 0%, 100%);
+    color: hsl(219, 29%, 14%);
+    grid-area: content3;
+}
+
+#content4 {
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+    grid-area: content4;
+}
+
+#content5 {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 29%, 14%);
+    grid-area: content5;
+}
+
+@media only screen and (min-width: 1440px) {
+    .grid-container {
+        max-width: 1075px;
+        background-color: hsl(210, 46%, 95%);
+        margin: auto;
+        grid-template-columns: 0.75fr 0.75fr 0.75fr 0.75fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-areas: 
+        "content1 content1 content2 content5"
+        "content3 content4 content4 content5";
+        
+    }
+
+    body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
